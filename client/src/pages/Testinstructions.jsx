@@ -1,6 +1,8 @@
 import React from 'react';
-
+import { useNavigate } from 'react-router';
+ 
 const Testinstructions = () => {
+const navigate = useNavigate("")
   return (
     <div className="p-8 bg-gray-100 min-h-screen flex items-center justify-center">
       <div className="bg-white p-6 rounded-lg shadow-lg max-w-2xl">
@@ -23,7 +25,7 @@ const Testinstructions = () => {
 
         {/* Button */}
         <div className="mt-6 flex justify-end">
-          <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300">
+          <button onClick={() => navigate("/test_interface")} className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300">
             Proceed to Test
           </button>
         </div>

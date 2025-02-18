@@ -1,6 +1,8 @@
 import React from 'react';
-
+import { useState } from 'react';
+import { useNavigate } from 'react-router';
 const Available_tests = () => {
+    const navigate = useNavigate()
   return (
     <div className="p-8 bg-gray-100">
       {/* Title and Search */}
@@ -25,7 +27,7 @@ const Available_tests = () => {
               <p className="text-gray-600">Questions: 50</p>
               <p className="text-gray-600">Date: 20 February 2025</p>
             </div>
-            <button 
+            <button onClick={() => navigate("/test_instructions")}
               className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300"
             >
               Start
